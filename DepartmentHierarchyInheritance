@@ -1,0 +1,93 @@
+class SuperDepartment{
+public void departmentName() {
+	System.out.println("Welcome to Super Department");
+	}
+public void getTodaysWork() {
+	System.out.println("No Work as of now");
+}
+public void getWorkDeadline() {
+	System.out.println("Nil");
+}
+public void isTodayAHoliday() {
+	System.out.println("Today is not a holiday");
+}
+}
+
+
+
+class AdminDepartment extends SuperDepartment{
+public void departmentName() {
+	System.out.println("welcome to Admin Department");
+}
+public void getTodaysWork() {
+	System.out.println("Complete your documents Submission");
+}
+public void getWorkDeadline() {
+	System.out.println("Complete by EOD");
+}
+}
+
+
+
+class HrDepartment extends SuperDepartment{
+public void departmentName() {
+	System.out.println("Welcome to HR Department");
+}
+public void getTodaysWork() {
+	System.out.println("Fill today's timesheet and mark your attendance");
+	}
+public void getWorkDeadline() {
+	System.out.println("Complete by EOD");
+}
+public void doActivity() {
+	System.out.println("Team Lunch");
+}
+}
+
+
+
+class TechDepartment extends SuperDepartment{
+public void departmentName() {
+	System.out.println("Welcome to Tech Department");
+}
+public void getTodaysWork() {
+	System.out.println("Complete coding of module 1");
+}
+public void getWorkDeadline() {
+	System.out.println("Complete by EOD");
+}
+public void getTechStackInformation() {
+	System.out.println("Core Java");
+}
+}
+
+
+public class Main {
+	public static void main(String args[]) 
+	{
+		AdminDepartment objadm= new AdminDepartment();
+		objadm.departmentName();
+		objadm.getTodaysWork();
+		objadm.getWorkDeadline();
+		objadm.isTodayAHoliday();
+		System.out.println();
+				
+		
+		HrDepartment objhr= new HrDepartment();
+		objhr.departmentName();
+		objhr.doActivity();
+		objhr.getTodaysWork();
+		objhr.getWorkDeadline();
+		objhr.isTodayAHoliday();
+		System.out.println();
+		
+		
+		TechDepartment objtech= new TechDepartment();
+		objtech.departmentName();
+		objtech.getTodaysWork();
+		objtech.getWorkDeadline();
+		objtech.getTechStackInformation();
+		objtech.isTodayAHoliday();
+		System.out.println();
+}
+}
